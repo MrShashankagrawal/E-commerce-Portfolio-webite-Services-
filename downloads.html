@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Downloads - My Creative Services</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Add link to external CSS file -->
+    <!-- Add any additional CSS and JavaScript links or code here -->
+    <script>
+        // Cart functionality
+        var cartItems = [];
+
+        function addToCart(item) {
+            cartItems.push(item);
+            alert(item + " added to cart!");
+        }
+
+        function viewCart() {
+            if (cartItems.length === 0) {
+                alert("Your cart is empty.");
+            } else {
+                var cartString = "Cart items: \n";
+                for (var i = 0; i < cartItems.length; i++) {
+                    cartString += (i + 1) + ". " + cartItems[i] + "\n";
+                }
+                alert(cartString);
+            }
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <a href="#home">My Logo</a>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#about">About/Portfolio</a></li>
+                <li><a href="#academy">Academy</a></li>
+                <li><a href="#downloads">Downloads</a></li>
+                <li>
+                    <a href="#" onclick="viewCart()">
+                        Cart <i class="fas fa-shopping-cart"></i>
+                    </a>
+                </li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section id="downloads">
+        <h2>Downloads</h2>
+        <ul>
+            <li>
+                Project 1 
+                <button onclick="addToCart('ProjectX')">Add to Cart</button>
+            </li>
+            <li>
+                Project 2
+                <button onclick="addToCart('ProjectY')">Add to Cart</button>
+            </li>
+            <li>
+                Project 3 
+                <button onclick="addToCart('ProjectY')">Add to Cart</button>
+            </li>
+            <li>
+                Project 4 
+                <button onclick="addToCart('ProjectY')">Add to Cart</button>
+            </li>
+        </ul>
+    </section>
+    <footer>
+        <!-- Add your footer content here -->
+    </footer>
+    <!-- Add link to Font Awesome CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</body>
+</html>
